@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>显示所有用户</title>
-<%@include file="/WEB-INF/jsp/public/list.jspf"%>
+<%@include file="/WEB-INF/jsp/public/commons.jspf"%>
 <!-- ajax -->
 <script>
 	$(function() {

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>   
-  	<%@include file="/WEB-INF/jsp/public/list.jspf" %>
+  	<%@include file="/WEB-INF/jsp/public/commons.jspf" %>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>我的在线时长详细信息</title>
   </head>
