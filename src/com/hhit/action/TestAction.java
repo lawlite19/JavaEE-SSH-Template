@@ -11,6 +11,7 @@ import com.hhit.util.QueryHelper;
 @Scope("prototype")
 public class TestAction extends BaseAction<TestModel>{
 	public String list() throws Exception{
+		//分页--一行代码
 		new QueryHelper(TestModel.class, "t")
 		.preparePageBean(testService, pageNum, pageSize);
 		return "list";
