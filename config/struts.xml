@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 扩展名配置为action -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<!-- 把主题配置为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+
+<!-- 网站端package -->
+	<package name="default" namespace="/" extends="struts-default">
+		<!--  <interceptors>
+			声明拦截器 
+			<interceptor name="checkPrivilege"
+				class="com.hhit.util.CheckPrivilegeInterceptor"></interceptor>
+			重新定义默认的拦截器栈 
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="checkPrivilege"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>-->
+		<!-- 全局的Result配置 -->
+		<global-results>
+			<result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+			<result name="noPrivilegeError">/noPrivilegeError.jsp</result>
+		</global-results>
+		<!-- 配置测试用的Action -->
+		<!-- 通配符*,method="{1}"动态确定对应的方法，test_list user_addUI  -->
+		<action name="test_*" class="testAction" method="{1}">
+		 	<result name="list">/WEB-INF/jsp/testAction/list.jsp</result> 
+		</action> 
+		
+	</package>
+</struts>    
